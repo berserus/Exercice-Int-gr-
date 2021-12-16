@@ -1,0 +1,38 @@
+html {
+    font-size: 14px;
+    
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+
+}
+
+.blueLink {
+    color :blue;
+    border-style : solid;
+    border-color : blue;
+}
+.greenLink {
+    color : green;
+    border-style : solid;
+    border-color : green;
+}
+
+.redLink {
+    color: red;
+    border-style: solid;
+    border-color: red;
+}
+

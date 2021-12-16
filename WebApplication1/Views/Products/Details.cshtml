@@ -1,0 +1,53 @@
+﻿@using Northwind_MVC.Model;
+@model Products
+
+<h1>Détails</h1>
+<h2>Produit</h2>
+@{
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+    </head>
+    <body>
+
+       @{
+           <table>
+            <tr>
+                <td><strong>Nom du produit</strong></td>
+                <td>@Model.ProductName</td>
+            </tr>
+            <tr>
+                <td><strong>Quantité par Unité</strong></td>
+                <td>@Model.QuantityPerUnit</td>
+            </tr>
+            <tr>
+                <td><strong>Prix Unitaire</strong>></td>
+                <td>@Model.UnitPrice</td>
+            </tr>
+            <tr>
+                <td><strong>Unité en Stock</strong></td>
+                <td>@Model.UnitsInStock</td>
+            </tr>
+            <tr>
+                <td><strong>Unité en Commande</strong></td>
+                <td>@Model.UnitsOnOrder</td>
+            </tr>
+            <tr>
+                <td><strong>Priorité de Commande</strong></td>
+                <td>@Model.ReorderLevel</td>
+            </tr>
+            <tr>
+                <td><strong>Discontinuité</strong></td>
+                <td>@Model.Discontinued</td>
+            </tr>
+            
+
+           </table>
+
+       }  
+
+
+</body>
+</html>
+}

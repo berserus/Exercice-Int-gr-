@@ -1,0 +1,29 @@
+﻿@using Northwind_MVC.Model;
+@model IEnumerable<Products>
+
+    <table>
+   
+        @{
+            
+            @foreach (Products product in Model)
+            {
+               <tr>
+                 
+                <td>@product.ProductId</td>
+                <td>@product.ProductName</td>
+                <td>@product.QuantityPerUnit</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.UnitsInStock</td>
+                <td>@product.UnitsOnOrder</td>
+                <td>@product.ReorderLevel</td>
+                <td>@product.Discontinued</td>
+               </tr> 
+             
+            }
+
+
+        }  
+    </table>
+
+
+}

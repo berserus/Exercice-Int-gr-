@@ -1,0 +1,35 @@
+﻿
+@using Northwind_MVC.Model;
+@model Products
+
+<center>
+    <form asp-action="Edit">
+    <input type="hidden" asp-for="ProductId" />
+    <label asp-for="ProductName"></label><br>
+    <input asp-for="ProductName"/><br>
+    <label asp-for="QuantityPerUnit"></label><br>
+    <input asp-for="QuantityPerUnit"/><br>
+    <label asp-for="UnitPrice"></label><br>
+    <input asp-for="UnitPrice"/><br>
+    <label asp-for="UnitsInStock"></label><br>
+    <input asp-for="UnitsInStock"/><br>
+    <label asp-for="UnitsOnOrder"></label><br>
+    <input asp-for="UnitsOnOrder"/><br>
+    <label asp-for="ReorderLevel"></label><br>
+    <input asp-for="ReorderLevel"/><br>
+    <label asp-for="Discontinued"></label><br>
+    <input asp-for="Discontinued"/><br>
+    <label asp-for="SupplierID"></label><br>
+    <input asp-for="SupplierID"/><br>
+    <label asp-for="CategoryID"></label><br>
+    <input asp-for="CategoryID"/><br>
+    <input type="submit" value="Save"></input>
+</form>
+<br>
+<form asp-controller="Products" asp-action="Index">
+        <button type="submit" class = "btn btn-default">Return to Products page</button>
+</form>
+
+</center>
+
+

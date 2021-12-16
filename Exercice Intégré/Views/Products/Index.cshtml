@@ -1,0 +1,88 @@
+﻿@using Northwind_MVC.Model;
+@model IEnumerable<Products>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Créer un produit", "Create", new {@class="blueLink;"})
+</p>
+
+
+<form asp-controller="Products" asp-action="Index">
+    <p>
+        Title: <input type="text" name="SearchString"  />
+        <input type="submit" value="Filter" id = "searchButtonFilter" />
+    </p>
+</form>
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuantityPerUnit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitsInStock)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitsOnOrder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReorderLevel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Discontinued)
+                </th>
+                <th></th>
+            </tr>
+
+@foreach (Products product in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => product.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.QuantityPerUnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.UnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.UnitsInStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.UnitsOnOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.ReorderLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.Discontinued)
+        </td>
+        <td>
+            @Html.ActionLink("Editer", "Edit", new { id=product.ProductId }, new {@class="blueLink"}) |
+            @Html.ActionLink("Details", "Details", new { id=product.ProductId }, new {@class="blueLink"}) |
+            @Html.ActionLink("Supprimer", "DeletePage", new { id=product.ProductId }, new {@class="redLink"})
+        </td>
+    </tr>
+}
+
+        
+       
+
+
+</table>
+@section Scripts {
+    @if (ViewBag.ToastrMessage!= null)
+    {
+        <script type="text/javascript">toastr.success("@ViewBag.ToastrMessage");</script>
+         
+    }
+
+}

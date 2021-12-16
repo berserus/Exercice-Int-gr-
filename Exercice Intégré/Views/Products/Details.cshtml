@@ -1,0 +1,65 @@
+﻿@using Northwind_MVC.Model;
+@model Products
+
+<h1>Détails</h1>
+<h2>Produit</h2>
+@{
+    
+   
+    <center>
+        <body>
+
+       @{
+           <table>
+            <tr>
+                <td><strong>Nom du produit</strong></td>
+                <td>@Model.ProductName</td>
+            </tr>
+            <tr>
+                <td><strong>Quantité par Unité</strong></td>
+                <td>@Model.QuantityPerUnit</td>
+            </tr>
+            <tr>
+                <td><strong>Prix Unitaire</strong>Z</td>
+                <td>@Model.UnitPrice</td>
+            </tr>
+            <tr>
+                <td><strong>Unité en Stock</strong></td>
+                <td>@Model.UnitsInStock</td>
+            </tr>
+            <tr>
+                <td><strong>Unité en Commande</strong></td>
+                <td>@Model.UnitsOnOrder</td>
+            </tr>
+            <tr>
+                <td><strong>Priorité de Commande</strong></td>
+                <td>@Model.ReorderLevel</td>
+            </tr>
+            <tr>
+                <td><strong>Discontinuité</strong></td>
+                <td>@Model.Discontinued</td>
+            </tr>
+            <tr>
+                <td><strong>Nom du fournisseur</strong></td>
+                <td>@Model.Supplier.ContactName</td>
+            </tr>
+            <tr>
+                <td><strong>Nom de la catégorie</strong></td>
+                <td>@Model.Category.CategoryName</td>
+            </tr>
+
+           </table>
+
+       }  
+
+
+        </body>
+        <form asp-controller="Products" asp-action="Index">
+                    <button type="submit" class = "btn btn-default">Return to Products page</button>
+       
+            </form>
+    
+    </center>
+ 
+
+}
