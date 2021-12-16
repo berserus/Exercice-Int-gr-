@@ -1,5 +1,5 @@
 # Exercice-Intégré
-Conception d'une application .net(web API + MVC). For the sake of simplicity, we used only the Products, Suppliers and Categories models in the Database.
+Conception from A-Z of a .NET(web API + MVC) app. For the sake of simplicity, we used only the Products, Suppliers and Categories models in the Database.
 
 
 
